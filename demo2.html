@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+        body {
+            height: 1000px;
+            overflow: auto;
+        }
+        
+        .ban {
+            background-color: black;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            line-height: 60px;
+            position: relative;
+        }
+        
+        #logo img {
+            width: 100px;
+            margin-right: 20px;
+            height: 60px;
+            margin-left: 20px;
+        }
+        
+        .ban>li {
+            width: 105px;
+            height: 60px;
+            list-style: none;
+        }
+        
+        li>a {
+            font-size: 15px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .ban a:hover {
+            color: orange;
+        }
+        
+        .body-left p {
+            text-align: center;
+        }
+        
+        .ban-right {
+            width: 20px;
+            height: 60px;
+        }
+        
+        .one {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-image: url("image/6.png");
+            background-position: -225px -22px;
+            margin-top: 20px;
+        }
+        
+        .first {
+            width: 4%;
+            height: 60px;
+        }
+        
+        .first>a {
+            color: white;
+            font-size: 5px;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        
+        .second {
+            width: 5%;
+            height: 60px;
+        }
+        
+        .second>a {
+            color: white;
+            font-size: 5px;
+            text-decoration: none;
+        }
+        
+        .third {
+            width: 20px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-image: url("image/6.png");
+            background-position: -85px -24px;
+            margin-top: 25px;
+        }
+        
+        .four {
+            width: 14.25%;
+            height: 26px;
+            background-image: url("image/4.png");
+            margin-top: 17px;
+            border: none;
+        }
+        
+        input {
+            color: white;
+            background-color: black;
+            opacity: 0.8;
+            margin-top: -60px;
+            border-radius: 5px;
+        }
+        
+        .body {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .body-left {
+            width: 50%;
+            height: 500px;
+            border-right: 1px solid black;
+        }
+        
+        .body-right {
+            width: 50%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .yang {
+            width: 200px;
+            height: 200px;
+            background-image: url("image/1.jpg");
+            border-radius: 50%;
+            animation: rotates 3s linear 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes rotates {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .contral {
+            display: flex;
+        }
+        
+        #play {
+            background-image: url("image/6.png");
+            background-position: -137px -113px;
+            width: 40px;
+            height: 40px;
+            background-color: #eee;
+        }
+        
+        .rate {
+            float: left;
+            position: relative;
+            width: 200px;
+            height: 4px;
+            display: inline;
+            margin-top: 20px;
+            background-color: #eee;
+        }
+        
+        #rate-line {
+            height: 200px;
+            height: 4px;
+            background-color: orange;
+            position: absolute;
+        }
+        
+        #rate-point {
+            width: 10px;
+            height: 10px;
+            background-image: url("image/6.png");
+            background-position: 0px -128px;
+            position: absolute;
+            top: -3px;
+        }
+        
+        #nowtime {
+            font-size: 5px;
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+        
+        #voice {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background: url("image/6.png") no-repeat -265px -128px;
+            margin: 13px 22px 0 5px;
+            z-index: 13;
+            background-color: #eee;
+        }
+        
+        .free {
+            width: 200px;
+            height: 40px;
+            background-image: url("image/7jpg.jpg");
+            background-position: 0px -45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .download {
+            width: 17px;
+            height: 17px;
+            background-image: url("image/7jpg.jpg");
+        }
+        
+        .comment {
+            width: 100%;
+            height: 500px;
+            border-top: 1px solid #eee;
+            position: relative;
+        }
+        
+        .center {
+            position: absolute;
+            left: 25%;
+            right: 25%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #comment {
+            font-size: 5px;
+        }
+        
+        .my-comment {
+            width: 80%;
+            height: 45%;
+        }
+        
+        .head-portrait {
+            height: 10%;
+            width: 10%;
+        }
+        
+        .head-portrait img {
+            height: 10%;
+            width: 100%;
+        }
+        
+        #content {
+            height: 30%;
+            width: 80%;
+            left: 15%;
+            position: absolute;
+            border: 1px solid #eee;
+            top: 5%；
+        }
+        
+        #num {
+            font-size: 5px;
+            position: absolute;
+            left: 70%;
+            top: 35%
+        }
+        
+        #btn {
+            width: 70px;
+            height: 30px;
+            background-color: orange;
+            color: white;
+            font-size: 5px;
+            position: absolute;
+            left: 84%;
+            border: none;
+            top: 36%
+        }
+        
+        .word {
+            width: 10%;
+            height: 10%;
+        }
+        
+        .won {
+            position: absolute;
+            top: 40%;
+            font-size: 5px;
+        }
+        
+        #my-comment {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .comment-1 {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        
+        #create-comment {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .name {
+            position: absolute;
+            font-size: 5px;
+            left: 15%
+        }
+        
+        .retime {
+            position: absolute;
+            left: 15%;
+            top: 75%;
+            font-size: 5px;
+        }
+        
+        .share {
+            position: absolute;
+            left: 95%;
+            /* top: 70%; */
+            font-size: 5px;
+        }
+        
+        .replay {
+            position: absolute;
+            top: 70%;
+            left: 95%;
+            font-size: 5px;
+        }
+        
+        .user {
+            height: 30%;
+            width: 10%;
+            position: absolute;
+            top: 5%
+        }
+        
+        .user img {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .user-cotent {
+            height: 50%;
+            width: 80%;
+            left: 15%;
+            position: absolute;
+            border: 1px solid #eee;
+            top: 20%;
+            font-size: 5px;
+        }
+        
+        .paging {
+            width: 50%;
+            height: 25px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .paging div {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #eee;
+            text-align: center;
+        }
+        
+        .paging a {
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 导航 -->
+        <div class="ban">
+            <div id="logo">
+                <img src="./image/3.jpg">
+            </div>
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">榜单</a>
+            </li>
+            <li>
+                <a href="#">歌手</a>
+            </li>
+            <li>
+                <a href="#">下载酷我客户端</a>
+            </li>
+            <div class="ban-right"></div>
+            <div class="one"></div>
+            <div class="first"><a href="#">美女秀</a></div>
+            <div class="one"></div>
+            <div class="first"><a href="#">酷我耳机</a></div>
+            <div class="one"></div>
+            <div class="first"><a href="#">vip会员</a></div>
+            <div class="one"></div>
+            <div class="first"><a href="#">i听</a></div>
+            <div class="second"><a href=:#>更多服务</a></div>
+            <div class="second"><a href="#">登录</a></div>
+            <div class="third"></div>
+            <input class="four" type="text" name="" placeholder="找到好音乐">
+        </div>
+        <!-- 中间部分 -->
+        <div class="body">
+            <!-- 歌词 -->
+            <div class="body-left">
+                <p>喜羊羊</p>
+                <p>别看我只是一只羊</p>
+                <p>羊儿的聪明难以想象</p>
+                <p>天再高心情一样奔放</p>
+                <p>每天都追赶太阳</p>
+                <p>有什么难题去牵绊我都不会去心伤</p>
+                <p>有什么危险在我面前也不会去慌乱</p>
+                <p>就算有狼群把我追赶也当做游戏一场</p>
+                <p>在什么时间都要开心笑容都会飞翔</p>
+                <p>就算会摔倒站了起来永远不会沮丧</p>
+                <p>在所有天气拥有叫人大笑的力量</p>
+                <p>虽然我只是羊</p>
+            </div>
+            <!-- 音乐播放器 -->
+            <div class="body-right">
+                <div class="yang"></div>
+                <audio id="myaudio">
+                    <source src="music/2.mp3">
+                </audio>
+                <div class="contral">
+                    <div id="play"></div>
+                    <div class="rate">
+                        <div id="rate-line"></div>
+                        <a id="rate-point"></a>
+                    </div>
+
+                    <div class="time">
+                        <p id="nowtime">00:00</p>
+                    </div>
+                    <div id="voice"></div>
+                </div>
+                <div class="free">
+                    <div class="download"></div>
+                    <p>免费下载这首歌</p>
+                </div>
+            </div>
+        </div>
+        <!-- 评论 -->
+        <div class="comment">
+            <div class="center">
+                <div class="my-comment">
+                    <p id="comment">评论 1703条评论</p>
+                    <!-- 我的评论 -->
+                    <div class="content">
+                        <div class="head-portrait">
+                            <img src="image/img-16185664344962d356fabd98be4be043cd34fa06ed552.jpg">
+                        </div>
+                        <textarea id="content" type="text" placeholder="分享你的音乐见解"></textarea>
+                    </div>
+                    <div class="smile"></div>
+                    <p id="num">已输入0个字</p>
+                    <button id="btn">评论</button>
+                </div>
+                <!-- 精彩评论 -->
+                <div id="won-comment">
+                    <div calss="word">
+                        <p class="won">精彩评论</p>
+                    </div>
+                    <div id="create-comment"></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 分页 -->
+        <div class="paging">
+            <div> <a href="#">《</a></div>
+            <div> <a href="#">1</a></div>
+            <div><a href="#">2</a></div>
+            <div><a href="#">3</a></div>
+            <div><a href="#">4</a></div>
+            <div><a href="#">5</a></div>
+            <div><a href="#">n</a></div>
+            <div> <a href="#">》</a></div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var i = 0;
+    var j = 0;
+    var m = 0;
+    var myaudio = document.getElementById("myaudio");
+    var play = document.getElementById("play");
+    var rateline = document.getElementById("rate-line")
+    var ratepoint = document.getElementById("rate-point");
+    var nowTime = document.getElementById("nowtime");
+    var voice = document.getElementById("voice");
+
+    var content = document.getElementById("content")
+    var num = document.getElementById("num");
+    var btn = document.getElementById("btn");
+
+    var userContent = document.getElementsByTagName("user-content")
+    var retime = document.getElementsByTagName("retime");
+    var nodeList = [];
+    var creates = document.getElementById("create-comment")
+
+    // 音乐播放器
+    play.onclick = function() {
+        i++;
+        if (i % 2 != 0) {
+            myaudio.play();
+            play.style.backgroundPosition = "-137px -193px";
+            var m = setInterval(function() {
+                var allTime = myaudio.duration;
+                var getTime = myaudio.currentTime;
+                var index = getTime / allTime * 200;
+                ratepoint.style.left = index + "px";
+                rateline.style.width = index + "px";
+                var n = getTime;
+                var x = parseInt(n / 60);
+                var y = parseInt(n / 10);
+                var z = parseInt(n % 10);
+                if (x < 10) {
+                    nowTime.innerHTML = "0" + x + ":" + y + z;
+                } else {
+                    nowTime.innerHTML = x + ":" + y + z;
+                }
+            }, )
+        } else {
+            myaudio.pause();
+            play.style.backgroundPosition = "-137px -113px"
+        }
+    }
+    voice.onclick = function() {
+            i++;
+            if (i % 2 == 1) {
+                myaudio.muted = false;
+                voice.style.backgroundPosition = "-265px -128px"
+
+            } else {
+                myaudio.muted = "ture";
+                voice.style.backgroundPosition = "-310px -128px"
+
+            }
+        }
+        // 我的评论 精彩评论
+    var m = setInterval(function() {
+        if (content.value.length != 0) {
+            num.innerHTML = "已输入" + content.value.length + "字";
+        }
+    }, 0);
+
+    function convertTime(start) {
+        return start < 10 ? ("0" + start) : start;
+
+    }
+
+    // function gettime() {
+    //     var date = new Date()
+    //     var year = date.getFullYear();
+    //     var month = date.getMonth() + 1;
+    //     var currentDay = date.getDate();
+    //     month = convertTime(month);
+    //     currentDay = convertTime(currentDay);
+    //     var hour = date.getHours();
+    //     var minute = date.getMinutes();
+    //     var second = date.getSeconds();
+    //     hour = convertTime(hour);
+    //     minute = convertTime(minute);
+    //     second = convertTime(second);
+    //     var end = year + "-" + month + "-" + currentDay + " " + hour + ":" + minute + ":" + second;
+    //     console.log(end);
+    //     return end;
+
+    // }
+
+    function create() {
+        var divnode1 = document.createElement("div")
+        var divnode2 = document.createElement("div")
+        var divnode3 = document.createElement("div")
+        var imgnode = document.createElement("img");
+        imgnode.setAttribute("src", "image/img-16185664344962d356fabd98be4be043cd34fa06ed552.jpg")
+        var pnode1 = document.createElement("p");
+        var pnode2 = document.createElement("p");
+        var pnode3 = document.createElement("p");
+        var pnode4 = document.createElement("p");
+        pnode1.innerHTML = "郭雨欣";
+        pnode2.innerHTML = "分享";
+        pnode3.innerHTML = "回复";
+        pnode1.setAttribute("class", "name");
+        pnode2.setAttribute("class", "share");
+        pnode3.setAttribute("class", "replay");
+        pnode4.setAttribute("class", "retime");
+        divnode1.setAttribute("class", "comment-1")
+        divnode2.setAttribute("class", "user")
+        divnode3.setAttribute("class", "user-cotent")
+        creates.appendChild(divnode1);
+        divnode1.appendChild(pnode1);
+        divnode1.appendChild(pnode2);
+        divnode1.appendChild(pnode3);
+        divnode1.appendChild(pnode4);
+        divnode1.appendChild(divnode2);
+        divnode1.appendChild(divnode3);
+        divnode2.appendChild(imgnode);
+        divnode3.innerHTML = nodeList[nodeList.length - 1].infoem;
+        var date = new Date()
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var currentDay = date.getDate();
+        month = convertTime(month);
+        currentDay = convertTime(currentDay);
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        hour = convertTime(hour);
+        minute = convertTime(minute);
+        second = convertTime(second);
+        var end = year + "-" + month + "-" + currentDay + " " + hour + ":" + minute + ":" + second;
+        pnode4.innerHTML = end;
+    }
+    btn.onclick = function() {
+        m++;
+        if (window.localStorage) {
+            var timer = new Date();
+            var inform = {
+                "time": "",
+                "infoem": ""
+            }
+            inform.time = timer;
+            inform.infoem = content.value;
+            var informs = localStorage["inform"];
+            localStorage['inform'] = JSON.stringify(inform);
+            var textStr = localStorage.inform
+            var textObj = JSON.parse(textStr);
+            nodeList.push(inform);
+            console.log(nodeList)
+            create();
+
+
+        }
+    }
+</script>
+
+</html>
